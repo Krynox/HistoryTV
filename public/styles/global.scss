@@ -1,0 +1,978 @@
+body{
+  background-image: url("../images/bg.png");
+  background-size: 350px;
+}
+#productnav{
+  background-color: #272727;
+  margin-top: -16px;
+  ul{
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -20px;
+    li {
+      cursor: pointer;
+      margin-top: 25px;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 20px;
+      list-style: none;
+      float: left;
+      color: white;
+      font-size: 1.2em;
+      font-family: 'Lobster', cursive;
+      padding-top: 5px;
+      padding-bottom: 7px;
+      text-align: center;
+    }
+    #headertitle{
+      width: 380px;
+      height: 45px;
+      margin-top: 0px;
+      list-style: none;
+      text-align: left;
+      float: left;
+      color: white;
+      font-size: 2em;
+      padding-top: 22px;
+      font-family: 'Lobster', cursive;
+      padding-left: 35px;
+    }
+    #loginlink{
+      margin-left: 400px;
+    }
+    #accountcredentials{
+      display: none;
+      margin-left: 0px;
+      border: none;
+      >button{
+        font-family: 'Hammersmith One', sans-serif;
+        margin-left: 10px;
+        border-radius: 5px;
+        background-color: #c0c0c0;
+        border:1px solid #c0c0c0;
+        font-size: 14px;
+      }
+      >button:hover{
+        color:#000000;
+     }
+    }
+    span:hover
+    {
+      cursor: pointer;
+    }
+
+  }
+
+}
+#useruploadscontainer{
+  width:1024px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px;
+  padding-top: 0px;
+  color:#FFFFFF;
+  height: -2px;
+  background-color: #272727;
+  border-radius: 10px;
+
+
+  #useruploads
+  {
+    font-family: 'Hammersmith One', sans-serif;
+    overflow: hidden;
+    height: 0px;
+    margin: 0;
+    margin-top: 10px;
+    >h2{
+      font-family: 'Hammersmith One', sans-serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #FFFFFF;
+      margin-right: 20px;
+    }
+    >li{
+      border:none;
+      text-align: center;
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 0px;
+      width:23%;
+      font-family: 'Hammersmith One', sans-serif;
+      font-size: 9px;
+      >i{
+
+        font-weight: bold;
+        font-size: 10px;
+
+      }
+      >div{
+        overflow: hidden;
+        background-color: #4a4c46;
+        font-family: 'Hammersmith One', sans-serif;
+        height:30px;
+        line-height: 32px;
+        border:1px solid #454740;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+#yearcontainer {
+  user-select: none;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #f5f5f5;
+  background-image: url("../images/sprinkles.png");
+
+  #line{
+    position: absolute;
+    top:46.5%;
+    padding: 0px;
+    margin-top: 0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    height: 0px;
+    width:100%;
+    border-bottom: 1px solid #000000;
+    height: 1px;
+    z-index: 2;
+
+  }
+  >ul{
+    width:1024px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    >li{
+      float:left;
+      list-style: none;
+      width:150px;
+      display: block;
+      color:#FFFFFF;
+      font-family:'Hammersmith One', sans-serif;
+      >ul{
+        position: absolute;
+        top:-30px;
+        width: 100px;
+        cursor: pointer;
+        >li:first-child{
+          padding-left: 0px;
+        }
+        >li{
+
+          width: 30px;
+          height: 100px;
+          padding-top: 0px;
+          padding-bottom: 10px;
+          padding-left: 40px;
+          list-style: none;
+          color:#000000;
+
+          &:nth-child(odd)
+          {
+            margin-top: 50px;
+            >span:nth-child(3){
+              visibility: hidden;
+            }
+          }
+          &:nth-child(even)
+          {
+            margin-top: -30px;
+            >span:first-child{
+              visibility: hidden;
+            }
+          }
+          >img{
+            width: 100%;
+            margin-right: 50%;
+            margin-left: 50%;
+          }
+          >span{
+            width: 100%;
+            margin-right: 50%;
+            margin-left: 50%;
+          }
+        }
+      }
+    }
+
+    .startdate{
+      width:50px;
+      span{
+        border-radius: 50%;
+        width: 50px;
+        text-align: center;
+        height:50px;
+        background-color: #211a21;
+        border: 1px solid #FFFFFF;
+        line-height: 50px;
+        float:left;
+      }
+      i{
+        border-left:1px solid #211a21;
+        margin-left: 25px;
+        height:25px;
+        margin-bottom: -5px;
+      }
+    }
+    .enddate{
+      margin-left: 140px;
+      width: 50px;
+      span{
+        border-radius: 50%;
+        width: 50px;
+        text-align: center;
+        height:50px;
+        background-color: #211a21;
+        border: 1px solid #FFFFFF;
+        line-height: 50px;
+        float: right;
+      }
+      i{
+        border-left:1px solid #211a21;
+        margin-left: 25px;
+        height:25px;
+      }
+    }
+  }
+}
+
+#accountcontainer{
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lobster', cursive;
+  color:#FFFFFF;
+  #accountform{
+    display: none;
+    color:#FFFFFF;
+    float:right;
+
+    input{
+      width: 150px;
+      border-radius: 5px;
+      font-family:'Hammersmith One', sans-serif;
+      border:none;
+      color:#000000;
+      margin-left: 10px;
+      margin-right: 20px;
+      padding-left: 10px;
+      padding-top: 2px;
+    }
+    button{
+      font-family: 'Hammersmith One', sans-serif;
+      margin-left: 10px;
+      border-radius: 5px;
+      background-color: #c0c0c0;
+      border:1px solid #c0c0c0;
+      font-size: 14px;
+    }
+    fieldset{
+      border: none;
+    }
+    legend{
+      font-size: 16px;
+      font-weight: bold;
+
+    }
+  }
+  #error{
+    color:#6b0905;
+    font-family:'Hammersmith One', sans-serif;
+    float: right;
+    width: 30%;
+    padding-bottom: 10px;
+    padding-right: 200px;
+    font-weight: bold;
+  }
+  #message{
+    width: 100%;
+    color:#FFFFFF;
+    text-align: right;
+    padding-right: 50px;
+    font-family:'Hammersmith One', sans-serif;
+  }
+}
+
+#tvcontainer{
+  width: 1024px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block;
+  height:100%;
+  >figure{
+    >img{
+      width: 100%;
+      z-index: 100;
+      margin-bottom: -16px;
+      //position: absolute;
+    }
+    .vidcanvas{
+      height: 75%;
+      width: 70%;
+      position: absolute;
+      left: 6%;
+      top:6%;
+      z-index: -1;
+      background-color: #5c5542;
+    }
+    #yearcounter{
+      position: absolute;
+      top:35%;
+      left: 77%;
+      background-image: url("../images/counter-bg.png");
+      background-color: #e4e4e4;
+      background-size: 110%;
+      font-family: 'Hammersmith One', sans-serif;
+      color:#000000;
+      height: 15%;
+      line-height: 160%;
+      padding-top: 2.3%;
+      width:15%;
+      font-size: 160%;
+      font-weight: bold;
+      text-align: center;
+      z-index: -1;
+      background-repeat: repeat;
+
+    }
+    #effectcanvas
+    {
+      opacity: 0.7;
+    }
+  }
+
+}
+
+#videoplayer{
+  display: none;
+}
+#uploadcontainer{
+  height: 0px;
+  margin-top: 20px;
+  h2{
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #FFFFFF;
+    margin-right: 20px;
+  }
+  #UploadArea
+  {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #ProgressContainer {
+    width: 100%;
+    height: 18px;
+    background: #F8F8F8;
+    margin-top: 14px;
+    border: 1px solid #E8E8E8;
+    border-top: 1px solid #D8D8D8;
+    border-radius: 4px;
+    padding: 2px;
+  }
+
+  #ProgressBar {
+    height: 100%;
+    width: 0%;
+    background: #2a0a08;
+  }
+
+  #UploadBox {
+    font-family: 'Lobster', cursive;
+    color:#FFFFFF;
+    background-color: #272727;
+    height: 0px;
+    overflow: hidden;
+    width: 984px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+
+    label{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 15px;
+    }
+    input{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      border:none;
+      padding-left: 5px;
+      width: 400px;
+      color:#000000;
+    }
+    input[type=file]{
+      background-color: #FFFFFF;
+      width: 361px;
+    }
+    button{
+      border-radius: 5px;
+      border:none;
+      margin-left:367px;
+
+      font-family: 'Hammersmith One', sans-serif;
+      margin-top: 8px;
+      padding: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+#videouploads{
+  background-color: #524235;
+  color:#FFFFFF;
+  margin-top: -5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  >div{
+    margin-left:auto;
+    margin-right: auto;
+    width:1024px;
+    >ul{
+      >li{
+        text-align: center;
+        display: inline-block;
+        margin-right:1%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width:23%;
+        font-size: 9px;
+        >i{
+          font-weight: bold;
+          font-size: 10px;
+        }
+        >div{
+          overflow: hidden;
+          background-color: #5c5542;
+          font-family: 'Hammersmith One', sans-serif;
+          height:30px;
+          line-height: 32px;
+          border:1px solid #5c5542;
+          padding: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-radius: 10px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+}
+.newcontent{
+  background-color: #f2ecd5;
+  margin: 0;
+  z-index: 10;
+  width:100%;
+  color:#272727;
+  >h2{
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-shadow:  3px 7px 7px rgba(0,0,0,0.2);
+    font-family: 'Hammersmith One', sans-serif;
+    color:#FFFFFF;
+    height: 50px;
+    display: block;
+    background-color: #7a2a2a;
+  }
+  >div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+
+    >h3{
+      font-size: 26px;
+    }
+    >p{
+      padding-left: 50px;
+      float: left;
+      width: 60%;
+      font-size: 18px;
+    }
+    >*{
+      display: none;
+    }
+    >img{
+      width:20%;
+      float:left;
+    }
+  }
+
+}
+#historycontainer{
+  background-color: #f5f5f5;
+  background-image: url("../images/sprinkles.png");
+  padding-top: 100px;
+  margin-bottom: -20px;
+  padding-bottom: 50px;
+}
+.contentcontainer{
+  margin-left: auto;
+  margin-right: auto;
+  width:1024px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  &:nth-child(even) .textcontainer{
+    float:right;
+  }
+  &:nth-child(odd) .textcontainer{
+    float:left;
+  }
+  &:nth-child(even) .imagecontainer{
+    float:left;
+  }
+  &:nth-child(odd) .imagecontainer{
+    float:right;
+  }
+  .textcontainer{
+    width: 70%;
+    margin-left: 10px;
+    height: 60%;
+  }
+  .textcontainer>h2{
+    >span{
+      font-family:'Hammersmith One', sans-serif;
+      border-bottom: 1px solid #dfd3b9;
+      padding-bottom: -10px;
+      color:#FFFFFF;
+      font-size: 22px;
+      background-color: #000000;
+      border-radius: 50%;
+      height:70px;
+      width:70px;
+      display: inline-block;
+      text-align: center;
+      line-height: 70px;
+      box-shadow:  inset 0 0 0 1px rgba(0,0,0,1),
+      inset 0 0 0 3px rgba(255,255,255,1),
+      3px 7px 7px rgba(0,0,0,0.2);
+    }
+  }
+  .textcontainer>p{
+    font-size: 22px;
+    font-family: "Arial", "Helvetica";
+    height:100%;
+    padding: 20px;
+    padding-left: 0px;
+
+  }
+  .imagecontainer{
+    position: relative;
+    box-shadow:  inset 0 0 40px 16px rgba(0,0,0,0.5),
+    inset 0 0 0 17px rgba(121,122,117,0.4),
+    3px 7px 7px rgba(0,0,0,0.2);
+    height:250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: #4f4939;
+    >img{
+      height: 150px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+}
+.notLoggedIn{
+  display: none;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
+}
+.clear{
+  height: 0;
+  clear: both;
+}
+
+@media(min-width: 810px) and (max-width: 1024px){
+  #tvcontainer{
+
+    >figure{
+      >#yearcounter{
+        font-size:160% ;
+        line-height: 140%;
+        top:38%;
+        padding-top: 0.5%;
+        width: 13%;
+        line-height: 150%;
+      }
+    }
+  }
+}
+@media(min-width: 710px) and (max-width: 810px){
+  #tvcontainer{
+
+    >figure{
+      >#yearcounter{
+        font-size:130% ;
+        width: 13%;
+        top:36%;
+        padding-top: 1%;
+        line-height: 150%;
+      }
+    }
+  }
+}
+@media(min-width: 500px) and (max-width: 710px){
+  #tvcontainer{
+
+    >figure{
+      >#yearcounter{
+        font-size:100% ;
+        left:76%;
+        top:38%;
+        padding-top: 0.5%;
+        width: 13%;
+      }
+    }
+  }
+}
+@media (min-width: 0px) and (max-width:750px){
+  #yearcontainer
+  {
+    padding-bottom: 0px;
+
+    #line{
+      display: none;
+    }
+    >ul{
+      width: 90%;
+      margin: 0;
+      padding: 0;
+      margin-left: 8%;
+      margin-right: 5%;
+      margin-top: 20px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      >li{
+        width:14%;
+        height: 100%;
+        margin-right: 2%;
+        >ul{
+          position: relative;
+          margin: 0;
+          padding: 0;
+          margin-top: 10%;
+          width: 50%;
+          padding-left: -40px;
+          height: 50%;
+          //margin-right: 50px;
+          display: block;
+          >li{
+            width: 200%;
+            display: block;
+            height: 100%;
+            padding-bottom: 0;
+            text-align: center;
+            //margin-left: 200px;
+            &:nth-child(even)
+            {
+              //margin-left: -20px;
+              margin-top: -20%;
+              padding-left: 0;
+              >span:first-child{
+                visibility: hidden;
+              }
+            }
+            &:nth-child(odd)
+            {
+              margin-left: 0;
+              margin-top: 0;
+            }
+            >span{
+              margin-right: 0;
+              margin-left: 0;
+              text-align: center;
+            }
+            >img{
+              width: 100%;
+              margin-right: 0;
+              margin-left: 0;
+            }
+          }
+        }
+
+      }
+      .startdate{
+        width: 10%;
+        display: none;
+        >span{
+
+        }
+      }
+      .enddate{
+        display: none;
+        >i{
+          margin-left:10px;
+
+        }
+        >span{
+          position: absolute;
+          left:-15px;
+          margin-left: 0px;
+        }
+
+      }
+    }
+  }
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+  #yearcontainer {
+    #line {
+      display: block;
+      top: 42.5%;
+    }
+    > ul {
+      width: 100%;
+      > li {
+        width: 13%;
+        > ul {
+
+          > li {
+            width: 30%;
+            &:nth-child(even) {
+              margin-left: -40%;
+              > span:first-child {
+                visibility: hidden;
+              }
+            }
+          }
+        }
+
+      }
+      .startdate {
+        width: 10%;
+      }
+      .enddate {
+        width: 8%;
+        margin-left: 105%;
+        display: inline-block;
+        height: 100px;
+        position: relative;
+        > i {
+          margin-left: 10px;
+
+        }
+        > span {
+          position: absolute;
+          left: -15px;
+          margin-left: 0px;
+
+        }
+
+      }
+    }
+  }
+}
+@media (min-device-width: 0px) and (max-width: 1024px) {
+  .newcontent{
+    >h2{
+      font-size: 120%;
+    }
+    >div{
+      width:100%;
+      font-size: 80%;
+      >h3{
+        text-align: center;
+      }
+      >p{
+        width: 90%;
+        padding-left:5%;
+        padding-right: 5%;
+        padding-top: 3%;
+      }
+      >img{
+        width: 80%;
+        margin-left: 10%;
+        clear: both;
+      }
+    }
+  }
+  #historycontainer{
+    padding-top: 0;
+    width: 100%;
+    .contentcontainer{
+      width: 90%;
+      .textcontainer{
+        width: 60%;
+        margin-bottom: 0;
+        margin-top: 0;
+        >h2{
+          margin: 0;
+        }
+        >p{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+      .imagecontainer{
+        width: 30%;
+        padding-bottom: 50%;
+        background: none;
+        box-shadow: none;
+        height: 0;
+        >img{
+          width:100%;
+          height: auto;
+          position: absolute;
+          top:0;
+          left: 0;
+        }
+      }
+    }
+  }
+  #productnav{
+    >ul{
+      margin: 0;
+      padding: 0;
+      padding-left: 2%;
+      width: 90%;
+      >li{
+        display: none;
+      }
+      #accountcredentials{
+        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+      #headertitle{
+        display: block;
+        width: 90%;
+        padding-left: 0;
+        font-size: 200%;
+        margin-right: 0;
+        text-align: center;
+      }
+      #useruploadscontainer{
+        width: 100%;
+      }
+    }
+  }
+
+  #accountcontainer{
+    width: 100%;
+  }
+  #videouploads{
+    >div{
+      width: 100%;
+      margin: 0;
+      >ul{
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        >li{
+          >div{
+            font-size: 90%;
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (min-device-width: 500px) and (max-width: 1024px){
+  #tvcontainer{
+    width: 95%;
+    margin-left:0;
+    margin-right: 0;
+    >figure{
+      >img{
+        width: 100%;
+      }
+      .vidcanvas{
+        position: absolute;
+        left: 10.5%;
+        vertical-align: center;
+        width: 59%;
+        height: 75%;
+      }
+      #effectcanvas{
+        >canvas{
+          width: 100%;
+          height: 100%;
+        }
+
+      }
+    }
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  #tvcontainer{
+    display: none;
+  }
+  #videouploads
+  {
+    display: none;
+  }
+  #historycontainer{
+    padding-top: 0;
+    width: 100%;
+    .contentcontainer{
+      width: 90%;
+      .textcontainer{
+        width: 100%;
+        clear: both;
+        margin-bottom: 0;
+        margin-top: 0;
+        >h2{
+          margin: 0;
+        }
+        >p{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+      .imagecontainer{
+        width: 100%;
+        padding-bottom: 50%;
+        background: none;
+        box-shadow: none;
+        height: 0;
+        float: left;
+        >img{
+          width:50%;
+          height: auto;
+          position: absolute;
+          top:0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+}

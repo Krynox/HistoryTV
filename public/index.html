@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="src/scripts/modernizr.js"></script>
+    <title>Evolution of Television</title>
+</head>
+<body data-ng-controller="NavController">
+<div data-ng-controller="UploadController">
+<nav id="productnav">
+    <ul>
+        <li id="headertitle">History of Television</li>
+        <li id="loginlink" data-ng-click="showLogin()">Login</li>
+        <li id="signuplink" data-ng-click="showSignup()">Signup</li>
+        <li id="accountcredentials">Logged in as <span id="user"></span><button id="btnlogout" data-ng-click="logout()">Logout</button> <button data-ng-click="showUpload()">Upload video</button><button class="{{loggedClass}}" data-ng-click="showUserUploads()">My uploads</button></li>
+        <div class="clear">&nbsp;</div>
+    </ul>
+    <div class="clear">&nbsp;</div>
+    <div id="accountcontainer">
+        <form id="accountform">
+            <fieldset>
+                <label for="username">Username: </label><input type="text" id="username"/>
+                <label for="password">Password: </label><input type="password" id="password"/>
+                <button  data-ng-click="login()" id="btnlogin">login</button>
+                <button id="btnsignup" data-ng-click="signup()">signup</button>
+            </fieldset>
+        </form>
+        <div id="message">{{message}}</div>
+        <div id="error">{{error}}</div>
+        <div class="clear">&nbsp;</div>
+    </div>
+</nav>
+<div>
+    <div id="uploadcontainer" class="{{loggedClass}}">
+        <div id="UploadBox" >
+        <h2>Upload your own video</h2>
+        <span id='UploadArea'>
+            <label for="FileBox">Choose a file: </label><input type="file" id="FileBox"><br>
+            <label for="NameBox">Name: </label><input type="text" id="NameBox"><br>
+            <button	type='button' id='UploadButton' class='Button'>Upload</button>
+        </span>
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    <div id="useruploadscontainer" class="{{loggedClass}}">
+        <ul id="useruploads">
+            <h2>My Videos</h2>
+            <li data-ng-repeat="i in userUploads" data-ng-click="changeVideo(i.Filelocation)">
+                <div title="{{i.Filename}}">{{i.Filename}}</div>
+                <i>Views:</i> {{i.views}} <i>From:</i> {{i.location}}
+            </li>
+            <div class="clear">&nbsp;</div>
+        </ul>
+        <div class="clear">&nbsp;</div>
+    </div>
+</div>
+
+<div id="tvcontainer">
+<figure >
+    <div id="yearcounter">{{startYear}}<br/> {{endYear}}</div>
+    <canvas id="videocanvas" class="vidcanvas"></canvas>
+    <div id="effectcanvas" class="vidcanvas"></div>
+    <img src="images/tv-draw.png" alt="tv-video" id="tvimg"/>
+</figure>
+</div>
+    <div id="videouploads">
+        <div>
+            <ul>
+                <li data-ng-repeat="i in uploads" data-ng-click="changeVideo(i.Filelocation)">
+                    <div title="{{i.Filename}}">{{i.Filename}}</div>
+                    <i>Views:</i> {{i.views}} <i>From:</i> {{i.location}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<video id="videoplayer" controls loop crossorigin="anonymous" autoplay>
+    <source id="videosource" src="video/Shingeki%20no%20Kyojin.mp4"/>
+</video>
+<div id="yearcontainer">
+    <ul>
+        <li data-ng-repeat="y in years"  data-ng-click="changeYear(y.startDate,y.endDate)">
+            <div class="startdate"><span>{{y.startDate }}</span><i></i></div>
+
+            <ul class="decade">
+                <li data-ng-repeat="date in y.dates" ><span >{{date.date}}</span ><img src="images/sprinkles.png" data-ng-src="{{date.image}}" alt="{{date.date}}"/><span>{{date.date}}</span></li>
+            </ul>
+            <div class="enddate"><i></i><span>{{y.endDate }}</span></div>
+            <div class="clear">&nbsp;</div>
+        </li>
+        <div class="clear">&nbsp;</div>
+    </ul>
+    <div id="line">&nbsp;</div>
+    <div class="clear">&nbsp;</div>
+</div>
+<div data-ng-repeat="n in new | filter:timeFilter" class="newcontent" ng-newcontent>
+    <h2 ng-click="showContent()">{{n.Teaser}}</h2>
+    <div>
+        <h3>{{n.Title}}</h3>
+        <img src="images/sprinkles.png" data-ng-src="{{n.image}}" alt="{{n.title}}" title="{{n.title}}"/>
+        <p>{{n.Text}}</p>
+    </div>
+</div>
+<section id="historycontainer">
+    <div data-ng-repeat="i in items | filter:yearFilter" class="contentcontainer">
+        <div class="textcontainer">
+        <h2><span>{{i.timeYear}}</span> {{i.title}}</h2>
+        <p>{{i.text}}</p>
+        </div>
+        <div class="imagecontainer"><img src="images/sprinkles.png" data-ng-src="{{i.image}}" alt="{{i.title}}" title="{{i.title}}"/></div>
+        <div class="clear">&nbsp;</div>
+    </div>
+</section>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="src/scripts/com.criography.staticGen.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.socket.io/socket.io-1.2.1.js"></script>
+    <script src="src/app.js"></script>
+<!--    <script src="src/app/canvasDrawer.js"></script>
+    <script src="src/app/videoUpload.js"></script>
+    <script src="src/app/app.js"></script>
+    <script src="src/app/nav/DateItem.js"></script>
+    <script src="src/app/nav/OldContent.js"></script>
+    <script src="src/app/nav/TimeLineItem.js"></script>
+    <script src="src/app/nav/NewContent.js"></script>
+    <script src="src/app/nav/NavController.js"></script>
+    <script src="src/app/upload/upload.js"></script>
+    <script src="src/app/upload/UploadController.js"></script>-->
+</body>
+</html>
