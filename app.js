@@ -25,8 +25,8 @@ var Files={};
 server.listen(3001);
 
 var connectDB=require("./data/connectDB.js");
-//app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost/');

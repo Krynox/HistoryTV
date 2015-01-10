@@ -18,6 +18,15 @@ router.get("/offline.manifest", function(req, res){
 router.get('/', function(req, res) {
   res.render('./public/index.html');
 });
+router.get('/styles/style.css',function(req,res){
+   res.render('./public/styles/style.css');
+});
+router.get('/src/scripts/com.criography.staticGen.min.js',function(req,res){
+res.render('./public/src/scripts/com.criography.staticGen.min.js');
+});
+router.get('/src/app.js',function(req,res){
+    res.render('./public/src/app.js');
+});
 router.post('/getuseruploads',function(req,res){
    if(req.isAuthenticated()){
        Uploads.find({username:req.user.username},function(err,data){
