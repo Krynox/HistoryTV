@@ -39,7 +39,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));.
+app.use('/images',express.static(path.join(__dirname, 'public/images')));
+app.use('/src',express.static(path.join(__dirname, 'public/src')));
+app.use('/src/scripts',express.static(path.join(__dirname, 'public/src/scripts/')));
+app.use('/styles',express.static(path.join(__dirname, 'public/styles/')));
+app.use('/video',express.static(path.join(__dirname, 'public/video/')));
 app.use(expressSession({secret: 'nodeCode',resave: true,saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
